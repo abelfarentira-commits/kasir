@@ -323,15 +323,20 @@ return [
         ],
         [
             'text' => 'pages',
-            'url' => 'admin/pages',
+            'url' => 'siswa/index',
             'icon' => 'far fa-fw fa-file',
             'label' => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'Data Master'],
         [
-            'text' => 'profile',
-            'url' => 'admin/settings',
+            'text' => 'Siswa',
+            'url' => 'siswa',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Guru',
+            'url' => 'guru',
             'icon' => 'fas fa-fw fa-user',
         ],
         [

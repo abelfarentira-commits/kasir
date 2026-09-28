@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\GuruController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,6 +17,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+    Route ::resource('siswa', SiswaController::class);
+    Route ::resource('guru', GuruController::class);
+    Route::get('/siswa/cetak-pdf', [SiswaController::class, 'cetakPdf'])->name('siswa.cetak-pdf');
+    Route::get('/gurus/cetak-pdf', [GuruController::class, 'cetakPdf'])->name('gurus.cetak-pdf');
+    });
 
 require __DIR__.'/auth.php';
