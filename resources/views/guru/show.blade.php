@@ -41,6 +41,7 @@
                             <td>{{ $guru->nip }}</td>
                         </tr>
                         <tr>
+                            
                             <th>Mata Pelajaran</th>
                             <td>{{ $guru->mata_pelajaran }}</td>
                         </tr>
